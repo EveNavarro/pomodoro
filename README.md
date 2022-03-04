@@ -2,7 +2,7 @@
 
 ## PREVIEW
 
-<img src="https://github.com/EveNavarro/pomodoro/blob/master/images/in%20progress.png">  <img src="https://github.com/EveNavarro/pomodoro/blob/master/images/done.png">
+<img src="https://github.com/EveNavarro/pomodoro/blob/master/images/in%20progress.png"> <img src="https://github.com/EveNavarro/pomodoro/blob/master/images/done.png">
 
 ### ¿Qué es la técnica Pomodoro?
 
