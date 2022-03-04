@@ -7,7 +7,7 @@
 }
 
 body {
-    background: linear-gradient(225deg, rgba(34,193,195,1) 0%, rgba(195,45,253,1) 100%);
+    background: linear-gradient(225deg, rgb(247 59 59) 0%, rgb(253 112 45) 100%);
     min-height: 100vh;
     display: flex;
     flex-direction: column;
