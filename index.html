@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pomodoro</title>
+    <link rel="icon" href="images/icons8-despertador-50.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="general.css">
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            <img src="images/icons8-despertador-50.png" alt="">
+        </div>
+        <h1>POMODORO TIME</h1>
+    </header>
+    <div id="app" class="app-container">
+        <div id="time" class="time">
+            <div id="value" class="value"></div>
+            <div id="taskName"></div>
+        </div>
+
+        <div class="tasks-container">
+            <div class="form">
+                <form action="" id="form">
+                    <input type="text" id="itTask" placeholder="Añadir tarea">
+                    <input type="submit" id="bAdd" value="&#43;">               
+                </form>
+            </div>
+        </div>        
+    </div>
+    <div id="tasks" class="tasks-container"></div>
+    <script src="app.js"></script>
+</body>
+</html>
