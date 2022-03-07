@@ -59,7 +59,7 @@ function renderTask() {
 }
 
 function startButtonHandler(id) {
-    time = 3;
+    time = 25 * 60;
     current = id;
     const taskIndex = tasks.findIndex(task => task.id === id);
 
