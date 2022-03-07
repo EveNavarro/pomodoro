@@ -134,6 +134,59 @@ body {
     font-size: 2rem;
 }
 
+#btn-pause {
+    position: absolute;
+    background: transparent;
+    border: none;
+    font-size: 1.5rem;
+    color: #fff;
+    opacity: .8;
+    top: 5em;
+    right: 0;
+    margin-right: 1.5rem;
+    cursor: pointer;
+	animation: heartbeat 1.5s ease-in-out infinite both;
+}
+
+  @keyframes heartbeat {
+    from {
+      -webkit-transform: scale(1.5);
+              transform: scale(1.5);
+      -webkit-transform-origin: center center;
+              transform-origin: center center;
+      -webkit-animation-timing-function: ease-out;
+              animation-timing-function: ease-out;
+    }
+    10% {
+      -webkit-transform: scale(0.91);
+              transform: scale(0.91);
+      -webkit-animation-timing-function: ease-in;
+              animation-timing-function: ease-in;
+    }
+    17% {
+      -webkit-transform: scale(0.98);
+              transform: scale(0.98);
+      -webkit-animation-timing-function: ease-out;
+              animation-timing-function: ease-out;
+    }
+    33% {
+      -webkit-transform: scale(0.87);
+              transform: scale(0.87);
+      -webkit-animation-timing-function: ease-in;
+              animation-timing-function: ease-in;
+    }
+    45% {
+      -webkit-transform: scale(1.5);
+              transform: scale(1.5);
+      -webkit-animation-timing-function: ease-out;
+              animation-timing-function: ease-out;
+    }
+  }
+
+  #btn-pause:hover {
+      opacity: 1;
+  }
+
 @media screen and (min-width: 480px){
     .app-container,
     .tasks-container {
@@ -149,5 +202,9 @@ body {
     .app-container,
     .tasks-container {
         width: 50%;
+    }
+
+    #btn-pause {
+        margin-right: 3rem;
     }
 }

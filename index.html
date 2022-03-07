@@ -14,8 +14,10 @@
         <div class="logo">
             <img src="images/icons8-despertador-50.png" alt="">
         </div>
+        
         <h1>POMODORO TIME</h1>
     </header>
+    
     <div id="app" class="app-container">
         <div id="time" class="time">
             <div id="value" class="value"></div>
@@ -32,6 +34,11 @@
         </div>        
     </div>
     <div id="tasks" class="tasks-container"></div>
+
+    <audio src="bell.wav" loop="true" style="display: none;"></audio>
+    
+    <button id="btn-pause" onclick="pause_Audio();" type="button" style="display: none;"><i class="fa-solid fa-bell-slash"></i></button>
+    
     <script src="app.js"></script>
 </body>
 </html>

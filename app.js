@@ -1,13 +1,15 @@
 const tasks = []; //almacenar cada una de las tareas
-let time = 0 //cuenta regresiva
+let time = 0; //cuenta regresiva
 let timer = null; //va a tener asignado una función que nos permitirá ejecutar un pedazo de código cada determinado tiempo
-let timerBreak = null;
+let timerBreak = null; 
 let current = null; //nos dice cuál es la tarea actual que se está ejecutando
-const taskName = document.querySelector('#time #taskName');
 
+const taskName = document.querySelector('#time #taskName');
 const bAdd = document.querySelector('#bAdd');
 const itTask = document.querySelector('#itTask');
 const form = document.querySelector('#form');
+const audio = document.querySelector('audio');
+const stopAudio = document.querySelector('#btn-pause');
 
 renderTime();
 renderTask();
@@ -28,7 +30,7 @@ function createTask(value) {
         completed: false
     };
 
-    tasks.unshift(newTask);
+    tasks.unshift(newTask); //agregamos la tarea al arreglo 
 }
 
 function renderTask() {
@@ -48,7 +50,7 @@ function renderTask() {
     startBTN.forEach(button => {
         button.addEventListener('click', e => {
             if(!timer) {
-                const id = button.getAttribute('data-id')
+                const id = button.getAttribute('data-id');
                 startButtonHandler(id);
                 button.textContent = 'En progreso ...';
             }
@@ -57,7 +59,7 @@ function renderTask() {
 }
 
 function startButtonHandler(id) {
-    time = 25 * 60;
+    time = 3;
     current = id;
     const taskIndex = tasks.findIndex(task => task.id === id);
 
@@ -75,12 +77,23 @@ function timeHandler(id) {
 
     if (time === 0) {
         clearInterval(timer);
+        alert();
         markCompleted(id);
         timer = null;
         renderTask();
         startBreak();
 
     }
+}
+
+function alert() {
+    audio.style.display = 'block';
+    stopAudio.style.display = 'block';
+    audio.play();
+}
+
+function pause_Audio() {
+    audio.pause();
 }
 
 function renderTime() {
